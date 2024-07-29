@@ -33,7 +33,7 @@
 This section provides an overview of the key technologies and frameworks utilized in the development of this project:
 
 * Programming Languages: Python
-* Libraries: Scikit-Learn, Pandas, NumPy, Seaborn, Matplotlib 
+* Libraries: Flask, Scikit-Learn, Pandas, NumPy, Seaborn, Matplotlib 
 * Integrated Development Environments: Visual Studio, Jupyter Notebook.
 * Design and Prototyping Tool: Adobe XD and Photoshop.
 * Other technologies: Bootstrap, Laravel, Font Awesome
