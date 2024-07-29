@@ -10,8 +10,6 @@
 
 <p style="width: 80%; margin: 0 auto">Depression is a mood disorder that causes a persistent feeling of sadness and loss of interest. It is also called as major depressive disorder or clinical depression, it affects how you feel, think and behave, and can lead to a variety of emotional and physical problems.</p>
 
-<br>
-
 <p>Depression Anxiety Stress Scales Responses is a dataset that was collected online from the various countries during the year of 2017 to 2019 by Openpsychometrics.org on <a target="_blank" href="https://www.psy.unsw.edu.au/dass">Psychology Foundation of Australia | DASS</a> in effort to educate the public about psychology. This dataset contains some background information of the respondents such as their race, education, religion, gender, etc. Furthermore, this dataset includes their responses from the 42 related negative emotional questions which is answerable from the scale of 1 to 4, and the 10-item personality test which is answerable from the scale of 1 to 7. Lastly, this dataset also contains the technical information of the respondent such as, what device they used while taking the test, where they found the test, etc.</p>
 
 <p>To check the dataset, <a href="https://www.kaggle.com/datasets/lucasgreenwell/depression-anxiety-stress-scales-responses">click me</a>.</p>
