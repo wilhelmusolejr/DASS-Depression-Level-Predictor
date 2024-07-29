@@ -1,0 +1,83 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #111;
+}
+
+.title {
+  text-align: center;
+  text-transform: uppercase;
+  padding-bottom: 20px;
+}
+
+form {
+  margin: 5% auto auto auto;
+  width: 50%;
+  background-color: #f5f5f5;
+}
+
+.test-parent,
+.personality-parent {
+  border: 1px solid black;
+  padding: 20px;
+  margin-bottom: 40px;
+  border-radius: 10px;
+}
+
+.question-question {
+  padding: 10px 10px 10px 15px;
+  background-color: rgb(0, 0, 0);
+  border-radius: 10px;
+  color: white;
+}
+
+.question {
+  border-bottom: 1px solid gray;
+  margin-bottom: 10px;
+}
+
+.radio {
+  margin: 20px;
+}
+
+.submit {
+  padding: 20px;
+  width: 100%;
+  background-color: black;
+  margin-bottom: 10px;
+  color: white;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 700;
+  border-radius: 100px;
+  border: 10px solid whitesmoke;
+}
+
+#familysize {
+  padding: 10px;
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+
+.result {
+  color: whitesmoke;
+  width: 100%;
+  background-color: #222;
+  padding: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-size: 24px;
+}
+
+.personal-parent {
+  padding: 0 20px;
+}

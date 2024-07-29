@@ -1,0 +1,1203 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="../static/style.css" />
+    <title>Depression Scale Prediction</title>
+  </head>
+  <body>
+    {% if p %}
+    <div class="result alert alert-danger">{{p}}</div>
+    {% endif %} {% if s %}
+    <div class="result alert alert-success">{{s}}</div>
+    {% endif %}
+    <form action="/" method="POST">
+      <!-- TEST -->
+      <div class="test-parent">
+        <h2 class="title">Questionnaire for Depression Test</h2>
+
+        <!-- QUESTION 1 -->
+        <div class="question">
+          <label for="Q3A">Question 1:</label><br />
+          <p class="question-question">
+            &#x2022; I couldn't seem to experience any positive feeling at all.
+          </p>
+          <div class="radio">
+            <div class="radio-list">
+              <input type="radio" id="Q3A_one" name="Q3A" value="1" />
+                <label for="Q3A_one">Did not apply to me at all </label>  
+            </div>
+            <div class="radio-list">
+              <input type="radio" id="Q3A_two" name="Q3A" value="2" />
+               
+              <label for="Q3A_two"
+                >Applied to me to some degree, or some of the time</label
+              >
+               
+            </div>
+            <div class="radio-list">
+              <input type="radio" id="Q3A_three" name="Q3A" value="3" />
+               
+              <label for="Q3A_three"
+                >Applied to me to a considerable degree, or a good part of the
+                time</label
+              >
+               
+            </div>
+            <div class="radio-list">
+              <input type="radio" id="Q3A_four" name="Q3A" value="4" />
+               
+              <label for="Q3A_four"
+                >Applied to me very much, or most of the time
+              </label>
+               
+            </div>
+          </div>
+        </div>
+
+        <!-- QUESTION 2 -->
+        <div class="question">
+          <label for="Q5A">Question 2:</label><br />
+          <p class="question-question">
+            &#x2022; I just couldn't seem to get going.
+          </p>
+          <div class="radio">
+            <div class="radio-list">
+              <input type="radio" id="Q5A_one" name="Q5A" value="1" />
+                <label for="Q5A_one">Did not apply to me at all </label>  
+            </div>
+            <div class="radio-list">
+              <input type="radio" id="Q5A_two" name="Q5A" value="2" />
+               
+              <label for="Q5A_two"
+                >Applied to me to some degree, or some of the time</label
+              >
+               
+            </div>
+            <div class="radio-list">
+              <input type="radio" id="Q5A_three" name="Q5A" value="3" />
+               
+              <label for="Q5A_three"
+                >Applied to me to a considerable degree, or a good part of the
+                time</label
+              >
+               
+            </div>
+            <div class="radio-list">
+              <input type="radio" id="Q5A_four" name="Q5A" value="4" />
+               
+              <label for="Q5A_four"
+                >Applied to me very much, or most of the time
+              </label>
+               
+            </div>
+          </div>
+        </div>
+
+        <!-- QUESTION 3 -->
+        <div class="question">
+          <label for="Q10A">Question 3:</label><br />
+          <p class="question-question">
+            &#x2022; I felt that I had nothing to look forward to.
+          </p>
+          <div class="radio">
+            <div class="radio-list">
+              <input type="radio" id="Q10A_one" name="Q10A" value="1" />
+                <label for="Q10A_one">Did not apply to me at all </label>  
+            </div>
+            <div class="radio-list">
+              <input type="radio" id="Q10A_two" name="Q10A" value="2" />
+               
+              <label for="Q10A_two"
+                >Applied to me to some degree, or some of the time</label
+              >
+               
+            </div>
+            <div class="radio-list">
+              <input type="radio" id="Q10A_three" name="Q10A" value="3" />
+               
+              <label for="Q10A_three"
+                >Applied to me to a considerable degree, or a good part of the
+                time</label
+              >
+               
+            </div>
+            <div class="radio-list">
+              <input type="radio" id="Q10A_four" name="Q10A" value="4" />
+               
+              <label for="Q10A_four"
+                >Applied to me very much, or most of the time
+              </label>
+               
+            </div>
+          </div>
+        </div>
+
+        <!-- QUESTION 4 -->
+        <div class="question">
+          <label for="Q13A">Question 4:</label><br />
+          <p class="question-question">&#x2022; I felt sad and depressed.</p>
+          <div class="radio">
+            <div class="radio-list">
+              <input type="radio" id="Q13A_one" name="Q13A" value="1" />
+                <label for="Q13A_one">Did not apply to me at all </label>  
+            </div>
+            <div class="radio-list">
+              <input type="radio" id="Q13A_two" name="Q13A" value="2" />
+               
+              <label for="Q13A_two"
+                >Applied to me to some degree, or some of the time</label
+              >
+               
+            </div>
+            <div class="radio-list">
+              <input type="radio" id="Q13A_three" name="Q13A" value="3" />
+               
+              <label for="Q13A_three"
+                >Applied to me to a considerable degree, or a good part of the
+                time</label
+              >
+               
+            </div>
+            <div class="radio-list">
+              <input type="radio" id="Q13A_four" name="Q13A" value="4" />
+               
+              <label for="Q13A_four"
+                >Applied to me very much, or most of the time
+              </label>
+               
+            </div>
+          </div>
+        </div>
+
+        <!-- QUESTION 5 -->
+        <div class="question">
+          <label for="Q16A">Question 5:</label><br />
+          <p class="question-question">
+            &#x2022; I felt that I had lost interest in just about everything.
+          </p>
+          <div class="radio">
+            <div class="radio-list">
+              <input type="radio" id="Q16A_one" name="Q16A" value="1" />
+                <label for="Q16A_one">Did not apply to me at all </label>  
+            </div>
+            <div class="radio-list">
+              <input type="radio" id="Q16A_two" name="Q16A" value="2" />
+               
+              <label for="Q16A_two"
+                >Applied to me to some degree, or some of the time</label
+              >
+               
+            </div>
+            <div class="radio-list">
+              <input type="radio" id="Q16A_three" name="Q16A" value="3" />
+               
+              <label for="Q16A_three"
+                >Applied to me to a considerable degree, or a good part of the
+                time</label
+              >
+               
+            </div>
+            <div class="radio-list">
+              <input type="radio" id="Q16A_four" name="Q16A" value="4" />
+               
+              <label for="Q16A_four"
+                >Applied to me very much, or most of the time
+              </label>
+               
+            </div>
+          </div>
+        </div>
+
+        <!-- QUESTION 6 -->
+        <div class="question">
+          <label for="Q17A">Question 6:</label><br />
+          <p class="question-question">
+            &#x2022; I felt I wasn't worth much as a person.
+          </p>
+          <div class="radio">
+            <div class="radio-list">
+              <input type="radio" id="Q17A_one" name="Q17A" value="1" />
+                <label for="Q17A_one">Did not apply to me at all </label>  
+            </div>
+            <div class="radio-list">
+              <input type="radio" id="Q17A_two" name="Q17A" value="2" />
+               
+              <label for="Q17A_two"
+                >Applied to me to some degree, or some of the time</label
+              >
+               
+            </div>
+            <div class="radio-list">
+              <input type="radio" id="Q17A_three" name="Q17A" value="3" />
+               
+              <label for="Q17A_three"
+                >Applied to me to a considerable degree, or a good part of the
+                time</label
+              >
+               
+            </div>
+            <div class="radio-list">
+              <input type="radio" id="Q17A_four" name="Q17A" value="4" />
+               
+              <label for="Q17A_four"
+                >Applied to me very much, or most of the time
+              </label>
+               
+            </div>
+          </div>
+        </div>
+
+        <!-- QUESTION 7 -->
+        <div class="question">
+          <label for="Q21A">Question 7:</label><br />
+          <p class="question-question">
+            &#x2022; I felt that life wasn't worthwhile.
+          </p>
+          <div class="radio">
+            <div class="radio-list">
+              <input type="radio" id="Q21A_one" name="Q21A" value="1" />
+                <label for="Q21A_one">Did not apply to me at all </label>  
+            </div>
+            <div class="radio-list">
+              <input type="radio" id="Q21A_two" name="Q21A" value="2" />
+               
+              <label for="Q21A_two"
+                >Applied to me to some degree, or some of the time</label
+              >
+               
+            </div>
+            <div class="radio-list">
+              <input type="radio" id="Q21A_three" name="Q21A" value="3" />
+               
+              <label for="Q21A_three"
+                >Applied to me to a considerable degree, or a good part of the
+                time</label
+              >
+               
+            </div>
+            <div class="radio-list">
+              <input type="radio" id="Q21A_four" name="Q21A" value="4" />
+               
+              <label for="Q21A_four"
+                >Applied to me very much, or most of the time
+              </label>
+               
+            </div>
+          </div>
+        </div>
+
+        <!-- QUESTION 8 -->
+        <div class="question">
+          <label for="Q24A">Question 8:</label><br />
+          <p class="question-question">
+            &#x2022; I couldn't seem to get any enjoyment out of the things I
+            did.
+          </p>
+          <div class="radio">
+            <div class="radio-list">
+              <input type="radio" id="Q24A_one" name="Q24A" value="1" />
+                <label for="Q24A_one">Did not apply to me at all </label>  
+            </div>
+            <div class="radio-list">
+              <input type="radio" id="Q24A_two" name="Q24A" value="2" />
+               
+              <label for="Q24A_two"
+                >Applied to me to some degree, or some of the time</label
+              >
+               
+            </div>
+            <div class="radio-list">
+              <input type="radio" id="Q24A_three" name="Q24A" value="3" />
+               
+              <label for="Q24A_three"
+                >Applied to me to a considerable degree, or a good part of the
+                time</label
+              >
+               
+            </div>
+            <div class="radio-list">
+              <input type="radio" id="Q24A_four" name="Q24A" value="4" />
+               
+              <label for="Q24A_four"
+                >Applied to me very much, or most of the time
+              </label>
+               
+            </div>
+          </div>
+        </div>
+
+        <!-- QUESTION 9 -->
+        <div class="question">
+          <label for="Q26A">Question 9:</label><br />
+          <p class="question-question">
+            &#x2022; I felt down-hearted and blue.
+          </p>
+          <div class="radio">
+            <div class="radio-list">
+              <input type="radio" id="Q26A_one" name="Q26A" value="1" />
+              <label for="Q26A_one">Did not apply to me at all </label>
+            </div>
+            <div class="radio-list">
+              <input type="radio" id="Q26A_two" name="Q26A" value="2" />
+              <label for="Q26A_two"
+                >Applied to me to some degree, or some of the time</label
+              >
+            </div>
+            <div class="radio-list">
+              <input type="radio" id="Q26A_three" name="Q26A" value="3" />
+              <label for="Q26A_three"
+                >Applied to me to a considerable degree, or a good part of the
+                time</label
+              >
+            </div>
+            <div class="radio-list">
+              <input type="radio" id="Q26A_four" name="Q26A" value="4" />
+              <label for="Q26A_four"
+                >Applied to me very much, or most of the time
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <!-- QUESTION 10 -->
+        <div class="question">
+          <label for="Q31A">Question 10:</label><br />
+          <p class="question-question">
+            &#x2022; I was unable to become enthusiastic about anything.
+          </p>
+          <div class="radio">
+            <div class="radio-list">
+              <input type="radio" id="Q31A_one" name="Q31A" value="1" />
+              <label for="Q31A_one">Did not apply to me at all </label>
+            </div>
+            <div class="radio-list">
+              <input type="radio" id="Q31A_two" name="Q31A" value="2" />
+              <label for="Q31A_two"
+                >Applied to me to some degree, or some of the time</label
+              >
+            </div>
+            <div class="radio-list">
+              <input type="radio" id="Q31A_three" name="Q31A" value="3" />
+              <label for="Q31A_three"
+                >Applied to me to a considerable degree, or a good part of the
+                time</label
+              >
+            </div>
+            <div class="radio-list">
+              <input type="radio" id="Q31A_four" name="Q31A" value="4" />
+              <label for="Q31A_four"
+                >Applied to me very much, or most of the time
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <!-- QUESTION 11 -->
+        <div class="question">
+          <label for="Q34A">Question 11:</label><br />
+          <p class="question-question">
+            &#x2022; I felt I was pretty worthless.
+          </p>
+          <div class="radio">
+            <div class="radio-list">
+              <input type="radio" id="Q34A_one" name="Q34A" value="1" />
+                <label for="Q34A_one">Did not apply to me at all </label>  
+            </div>
+            <div class="radio-list">
+              <input type="radio" id="Q34A_two" name="Q34A" value="2" />
+               
+              <label for="Q34A_two"
+                >Applied to me to some degree, or some of the time</label
+              >
+               
+            </div>
+            <div class="radio-list">
+              <input type="radio" id="Q34A_three" name="Q34A" value="3" />
+               
+              <label for="Q34A_three"
+                >Applied to me to a considerable degree, or a good part of the
+                time</label
+              >
+               
+            </div>
+            <div class="radio-list">
+              <input type="radio" id="Q34A_four" name="Q34A" value="4" />
+               
+              <label for="Q34A_four"
+                >Applied to me very much, or most of the time
+              </label>
+               
+            </div>
+          </div>
+        </div>
+
+        <!-- QUESTION 12 -->
+        <div class="question">
+          <label for="Q37A">Question 12:</label><br />
+          <p class="question-question">
+            &#x2022; I could see nothing in the future to be hopeful about.
+          </p>
+          <div class="radio">
+            <div class="radio-list">
+              <input type="radio" id="Q37A_one" name="Q37A" value="1" />
+                <label for="Q37A_one">Did not apply to me at all </label>  
+            </div>
+            <div class="radio-list">
+              <input type="radio" id="Q37A_two" name="Q37A" value="2" />
+               
+              <label for="Q37A_two"
+                >Applied to me to some degree, or some of the time</label
+              >
+               
+            </div>
+            <div class="radio-list">
+              <input type="radio" id="Q37A_three" name="Q37A" value="3" />
+               
+              <label for="Q37A_three"
+                >Applied to me to a considerable degree, or a good part of the
+                time</label
+              >
+               
+            </div>
+            <div class="radio-list">
+              <input type="radio" id="Q37A_four" name="Q37A" value="4" />
+               
+              <label for="Q37A_four"
+                >Applied to me very much, or most of the time
+              </label>
+               
+            </div>
+          </div>
+        </div>
+
+        <!-- QUESTION 13 -->
+        <div class="question">
+          <label for="Q38A">Question 13:</label><br />
+          <p class="question-question">
+            &#x2022; I felt that life was meaningless.
+          </p>
+          <div class="radio">
+            <div class="radio-list">
+              <input type="radio" id="Q38A_one" name="Q38A" value="1" />
+                <label for="Q38A_one">Did not apply to me at all </label>  
+            </div>
+            <div class="radio-list">
+              <input type="radio" id="Q38A_two" name="Q38A" value="2" />
+               
+              <label for="Q38A_two"
+                >Applied to me to some degree, or some of the time</label
+              >
+               
+            </div>
+            <div class="radio-list">
+              <input type="radio" id="Q38A_three" name="Q38A" value="3" />
+               
+              <label for="Q38A_three"
+                >Applied to me to a considerable degree, or a good part of the
+                time</label
+              >
+               
+            </div>
+            <div class="radio-list">
+              <input type="radio" id="Q38A_four" name="Q38A" value="4" />
+               
+              <label for="Q38A_four"
+                >Applied to me very much, or most of the time
+              </label>
+               
+            </div>
+          </div>
+        </div>
+
+        <!-- QUESTION 14 -->
+        <div class="question">
+          <label for="Q42A">Question 14:</label><br />
+          <p class="question-question">
+            &#x2022; I found it difficult to work up the initiative to do
+            things.
+          </p>
+          <div class="radio">
+            <div class="radio-list">
+              <input type="radio" id="Q42A_one" name="Q42A" value="1" />
+                <label for="Q42A_one">Did not apply to me at all </label>  
+            </div>
+            <div class="radio-list">
+              <input type="radio" id="Q42A_two" name="Q42A" value="2" />
+               
+              <label for="Q42A_two"
+                >Applied to me to some degree, or some of the time</label
+              >
+               
+            </div>
+            <div class="radio-list">
+              <input type="radio" id="Q42A_three" name="Q42A" value="3" />
+               
+              <label for="Q42A_three"
+                >Applied to me to a considerable degree, or a good part of the
+                time</label
+              >
+               
+            </div>
+            <div class="radio-list">
+              <input type="radio" id="Q42A_four" name="Q42A" value="4" />
+               
+              <label for="Q42A_four"
+                >Applied to me very much, or most of the time
+              </label>
+               
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PERSONALITY -->
+      <div class="personality-parent">
+        <!-- PERSONALITT 1 -->
+        <div class="question">
+          <label for="TIPI1">PERSONALITY 1:</label><br />
+          <p class="question-question">&#x2022; Extraverted, enthusiastic.</p>
+          <div class="radio">
+            <div class="radio-list">
+              <input type="radio" id="TIPI1_one" name="TIPI1" value="1" />
+              <label for="TIPI1_one">Disagree strongly</label>
+            </div>
+            <div class="radio-list">
+              <input type="radio" id="TIPI1_two" name="TIPI1" value="2" />
+              <label for="TIPI1_two">Disagree moderately</label>
+            </div>
+            <div class="radio-list">
+              <input type="radio" id="TIPI1_three" name="TIPI1" value="3" />
+              <label for="TIPI1_three">Disagree a little</label>
+            </div>
+            <div class="radio-list">
+              <input type="radio" id="TIPI1_four" name="TIPI1" value="4" />
+              <label for="TIPI1_four">Neither agree nor disagree </label>
+            </div>
+            <div class="radio-list">
+              <input type="radio" id="TIPI1_five" name="TIPI1" value="5" />
+              <label for="TIPI1_five">Agree a little </label>
+            </div>
+            <div class="radio-list">
+              <input type="radio" id="TIPI1_six" name="TIPI1" value="6" />
+              <label for="TIPI1_six">Agree moderately </label>
+            </div>
+            <div class="radio-list">
+              <input type="radio" id="TIPI1_seven" name="TIPI1" value="7" />
+              <label for="TIPI1_seven">Agree strongly </label>
+            </div>
+          </div>
+        </div>
+
+        <!-- PERSONALITT 2 -->
+        <div class="question">
+          <label for="TIPI2">PERSONALITY 2:</label><br />
+          <p class="question-question">&#x2022; Critical, quarrelsome.</p>
+          <div class="radio">
+            <div class="radio-list">
+              <input type="radio" id="TIPI2_one" name="TIPI2" value="1" />
+              <label for="TIPI2_one">Disagree strongly</label>
+            </div>
+            <div class="radio-list">
+              <input type="radio" id="TIPI2_two" name="TIPI2" value="2" />
+              <label for="TIPI2_two">Disagree moderately</label>
+            </div>
+            <div class="radio-list">
+              <input type="radio" id="TIPI2_three" name="TIPI2" value="3" />
+              <label for="TIPI2_three">Disagree a little</label>
+            </div>
+            <div class="radio-list">
+              <input type="radio" id="TIPI2_four" name="TIPI2" value="4" />
+              <label for="TIPI2_four">Neither agree nor disagree </label>
+            </div>
+            <div class="radio-list">
+              <input type="radio" id="TIPI2_five" name="TIPI2" value="5" />
+              <label for="TIPI2_five">Agree a little </label>
+            </div>
+            <div class="radio-list">
+              <input type="radio" id="TIPI2_six" name="TIPI2" value="6" />
+              <label for="TIPI2_six">Agree moderately </label>
+            </div>
+            <div class="radio-list">
+              <input type="radio" id="TIPI2_seven" name="TIPI2" value="7" />
+              <label for="TIPI2_seven">Agree strongly </label>
+            </div>
+          </div>
+        </div>
+
+        <!-- PERSONALITT 3 -->
+        <div class="question">
+          <label for="TIPI3">PERSONALITY 3:</label><br />
+          <p class="question-question">
+            &#x2022; Dependable, self-disciplined.
+          </p>
+          <div class="radio">
+            <div class="radio-list">
+              <input type="radio" id="TIPI3_one" name="TIPI3" value="1" />
+              <label for="TIPI3_one">Disagree strongly</label>
+            </div>
+            <div class="radio-list">
+              <input type="radio" id="TIPI3_two" name="TIPI3" value="2" />
+              <label for="TIPI3_two">Disagree moderately</label>
+            </div>
+            <div class="radio-list">
+              <input type="radio" id="TIPI3_three" name="TIPI3" value="3" />
+              <label for="TIPI3_three">Disagree a little</label>
+            </div>
+            <div class="radio-list">
+              <input type="radio" id="TIPI3_four" name="TIPI3" value="4" />
+              <label for="TIPI3_four">Neither agree nor disagree </label>
+            </div>
+            <div class="radio-list">
+              <input type="radio" id="TIPI3_five" name="TIPI3" value="5" />
+              <label for="TIPI3_five">Agree a little </label>
+            </div>
+            <div class="radio-list">
+              <input type="radio" id="TIPI3_six" name="TIPI3" value="6" />
+              <label for="TIPI3_six">Agree moderately </label>
+            </div>
+            <div class="radio-list">
+              <input type="radio" id="TIPI3_seven" name="TIPI3" value="7" />
+              <label for="TIPI3_seven">Agree strongly </label>
+            </div>
+          </div>
+        </div>
+
+        <!-- PERSONALITT 4 -->
+        <div class="question">
+          <label for="TIPI4">PERSONALITY 4:</label><br />
+          <p class="question-question">&#x2022; Anxious, easily upset.</p>
+          <div class="radio">
+            <div class="radio-list">
+              <input type="radio" id="TIPI4_one" name="TIPI4" value="1" />
+              <label for="TIPI4_one">Disagree strongly</label>
+            </div>
+            <div class="radio-list">
+              <input type="radio" id="TIPI4_two" name="TIPI4" value="2" />
+              <label for="TIPI4_two">Disagree moderately</label>
+            </div>
+            <div class="radio-list">
+              <input type="radio" id="TIPI4_three" name="TIPI4" value="3" />
+              <label for="TIPI4_three">Disagree a little</label>
+            </div>
+            <div class="radio-list">
+              <input type="radio" id="TIPI4_four" name="TIPI4" value="4" />
+              <label for="TIPI4_four">Neither agree nor disagree </label>
+            </div>
+            <div class="radio-list">
+              <input type="radio" id="TIPI4_five" name="TIPI4" value="5" />
+              <label for="TIPI4_five">Agree a little </label>
+            </div>
+            <div class="radio-list">
+              <input type="radio" id="TIPI4_six" name="TIPI4" value="6" />
+              <label for="TIPI4_six">Agree moderately </label>
+            </div>
+            <div class="radio-list">
+              <input type="radio" id="TIPI4_seven" name="TIPI4" value="7" />
+              <label for="TIPI4_seven">Agree strongly </label>
+            </div>
+          </div>
+        </div>
+
+        <!-- PERSONALITT 5 -->
+        <div class="question">
+          <label for="TIPI5">PERSONALITY 5:</label><br />
+          <p class="question-question">
+            &#x2022; Open to new experiences, complex.
+          </p>
+          <div class="radio">
+            <div class="radio-list">
+              <input type="radio" id="TIPI5_one" name="TIPI5" value="1" />
+              <label for="TIPI5_one">Disagree strongly</label>
+            </div>
+            <div class="radio-list">
+              <input type="radio" id="TIPI5_two" name="TIPI5" value="2" />
+              <label for="TIPI5_two">Disagree moderately</label>
+            </div>
+            <div class="radio-list">
+              <input type="radio" id="TIPI5_three" name="TIPI5" value="3" />
+              <label for="TIPI5_three">Disagree a little</label>
+            </div>
+            <div class="radio-list">
+              <input type="radio" id="TIPI5_four" name="TIPI5" value="4" />
+              <label for="TIPI5_four">Neither agree nor disagree </label>
+            </div>
+            <div class="radio-list">
+              <input type="radio" id="TIPI5_five" name="TIPI5" value="5" />
+              <label for="TIPI5_five">Agree a little </label>
+            </div>
+            <div class="radio-list">
+              <input type="radio" id="TIPI5_six" name="TIPI5" value="6" />
+              <label for="TIPI5_six">Agree moderately </label>
+            </div>
+            <div class="radio-list">
+              <input type="radio" id="TIPI5_seven" name="TIPI5" value="7" />
+              <label for="TIPI5_seven">Agree strongly </label>
+            </div>
+          </div>
+        </div>
+
+        <!-- PERSONALITT 6 -->
+        <div class="question">
+          <label for="TIPI6">PERSONALITY 6:</label><br />
+          <p class="question-question">&#x2022; Reserved, quiet.</p>
+          <div class="radio">
+            <div class="radio-list">
+              <input type="radio" id="TIPI6_one" name="TIPI6" value="1" />
+              <label for="TIPI6_one">Disagree strongly</label>
+            </div>
+            <div class="radio-list">
+              <input type="radio" id="TIPI6_two" name="TIPI6" value="2" />
+              <label for="TIPI6_two">Disagree moderately</label>
+            </div>
+            <div class="radio-list">
+              <input type="radio" id="TIPI6_three" name="TIPI6" value="3" />
+              <label for="TIPI6_three">Disagree a little</label>
+            </div>
+            <div class="radio-list">
+              <input type="radio" id="TIPI6_four" name="TIPI6" value="4" />
+              <label for="TIPI6_four">Neither agree nor disagree </label>
+            </div>
+            <div class="radio-list">
+              <input type="radio" id="TIPI6_five" name="TIPI6" value="5" />
+              <label for="TIPI6_five">Agree a little </label>
+            </div>
+            <div class="radio-list">
+              <input type="radio" id="TIPI6_six" name="TIPI6" value="6" />
+              <label for="TIPI6_six">Agree moderately </label>
+            </div>
+            <div class="radio-list">
+              <input type="radio" id="TIPI6_seven" name="TIPI6" value="7" />
+              <label for="TIPI6_seven">Agree strongly </label>
+            </div>
+          </div>
+        </div>
+
+        <!-- PERSONALITT 7 -->
+        <div class="question">
+          <label for="TIPI7">PERSONALITY 7:</label><br />
+          <p class="question-question">&#x2022; Sympathetic, warm.</p>
+          <div class="radio">
+            <div class="radio-list">
+              <input type="radio" id="TIPI7_one" name="TIPI7" value="1" />
+              <label for="TIPI7_one">Disagree strongly</label>
+            </div>
+            <div class="radio-list">
+              <input type="radio" id="TIPI7_two" name="TIPI7" value="2" />
+              <label for="TIPI7_two">Disagree moderately</label>
+            </div>
+            <div class="radio-list">
+              <input type="radio" id="TIPI7_three" name="TIPI7" value="3" />
+              <label for="TIPI7_three">Disagree a little</label>
+            </div>
+            <div class="radio-list">
+              <input type="radio" id="TIPI7_four" name="TIPI7" value="4" />
+              <label for="TIPI7_four">Neither agree nor disagree </label>
+            </div>
+            <div class="radio-list">
+              <input type="radio" id="TIPI7_five" name="TIPI7" value="5" />
+              <label for="TIPI7_five">Agree a little </label>
+            </div>
+            <div class="radio-list">
+              <input type="radio" id="TIPI7_six" name="TIPI7" value="6" />
+              <label for="TIPI7_six">Agree moderately </label>
+            </div>
+            <div class="radio-list">
+              <input type="radio" id="TIPI7_seven" name="TIPI7" value="7" />
+              <label for="TIPI7_seven">Agree strongly </label>
+            </div>
+          </div>
+        </div>
+
+        <!-- PERSONALITT 8 -->
+        <div class="question">
+          <label for="TIPI8">PERSONALITY 8:</label><br />
+          <p class="question-question">&#x2022; Disorganized, careless.</p>
+          <div class="radio">
+            <div class="radio-list">
+              <input type="radio" id="TIPI8_one" name="TIPI8" value="1" />
+              <label for="TIPI8_one">Disagree strongly</label>
+            </div>
+            <div class="radio-list">
+              <input type="radio" id="TIPI8_two" name="TIPI8" value="2" />
+              <label for="TIPI8_two">Disagree moderately</label>
+            </div>
+            <div class="radio-list">
+              <input type="radio" id="TIPI8_three" name="TIPI8" value="3" />
+              <label for="TIPI8_three">Disagree a little</label>
+            </div>
+            <div class="radio-list">
+              <input type="radio" id="TIPI8_four" name="TIPI8" value="4" />
+              <label for="TIPI8_four">Neither agree nor disagree </label>
+            </div>
+            <div class="radio-list">
+              <input type="radio" id="TIPI8_five" name="TIPI8" value="5" />
+              <label for="TIPI8_five">Agree a little </label>
+            </div>
+            <div class="radio-list">
+              <input type="radio" id="TIPI8_six" name="TIPI8" value="6" />
+              <label for="TIPI8_six">Agree moderately </label>
+            </div>
+            <div class="radio-list">
+              <input type="radio" id="TIPI8_seven" name="TIPI8" value="7" />
+              <label for="TIPI8_seven">Agree strongly </label>
+            </div>
+          </div>
+        </div>
+
+        <!-- PERSONALITT 9 -->
+        <div class="question">
+          <label for="TIPI9">PERSONALITY 9:</label><br />
+          <p class="question-question">&#x2022; Calm, emotionally stable.</p>
+          <div class="radio">
+            <div class="radio-list">
+              <input type="radio" id="TIPI9_one" name="TIPI9" value="1" />
+              <label for="TIPI9_one">Disagree strongly</label>
+            </div>
+            <div class="radio-list">
+              <input type="radio" id="TIPI9_two" name="TIPI9" value="2" />
+              <label for="TIPI9_two">Disagree moderately</label>
+            </div>
+            <div class="radio-list">
+              <input type="radio" id="TIPI9_three" name="TIPI9" value="3" />
+              <label for="TIPI9_three">Disagree a little</label>
+            </div>
+            <div class="radio-list">
+              <input type="radio" id="TIPI9_four" name="TIPI9" value="4" />
+              <label for="TIPI9_four">Neither agree nor disagree </label>
+            </div>
+            <div class="radio-list">
+              <input type="radio" id="TIPI9_five" name="TIPI9" value="5" />
+              <label for="TIPI9_five">Agree a little </label>
+            </div>
+            <div class="radio-list">
+              <input type="radio" id="TIPI9_six" name="TIPI9" value="6" />
+              <label for="TIPI9_six">Agree moderately </label>
+            </div>
+            <div class="radio-list">
+              <input type="radio" id="TIPI9_seven" name="TIPI9" value="7" />
+              <label for="TIPI9_seven">Agree strongly </label>
+            </div>
+          </div>
+        </div>
+
+        <!-- PERSONALITT 10 -->
+        <div class="question">
+          <label for="TIPI10">PERSONALITY 10:</label><br />
+          <p class="question-question">&#x2022; Conventional, uncreative.</p>
+          <div class="radio">
+            <div class="radio-list">
+              <input type="radio" id="TIPI10_one" name="TIPI10" value="1" />
+              <label for="TIPI10_one">Disagree strongly</label>
+            </div>
+            <div class="radio-list">
+              <input type="radio" id="TIPI10_two" name="TIPI10" value="2" />
+              <label for="TIPI10_two">Disagree moderately</label>
+            </div>
+            <div class="radio-list">
+              <input type="radio" id="TIPI10_three" name="TIPI10" value="3" />
+              <label for="TIPI10_three">Disagree a little</label>
+            </div>
+            <div class="radio-list">
+              <input type="radio" id="TIPI10_four" name="TIPI10" value="4" />
+              <label for="TIPI10_four">Neither agree nor disagree </label>
+            </div>
+            <div class="radio-list">
+              <input type="radio" id="TIPI10_five" name="TIPI10" value="5" />
+              <label for="TIPI10_five">Agree a little </label>
+            </div>
+            <div class="radio-list">
+              <input type="radio" id="TIPI10_six" name="TIPI10" value="6" />
+              <label for="TIPI10_six">Agree moderately </label>
+            </div>
+            <div class="radio-list">
+              <input type="radio" id="TIPI10_seven" name="TIPI10" value="7" />
+              <label for="TIPI10_seven">Agree strongly </label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PERSONALAL -->
+      <div class="personal-parent">
+        <!-- Education -->
+        <div class="question">
+          <label for="education">Education:</label>
+          <div class="radio">
+            <div class="radio-list">
+              <input type="radio" id="educ_one" name="education" value="1" />
+              <label for="educ_one">Less than high school</label>
+            </div>
+            <div class="radio-list">
+              <input type="radio" id="educ_two" name="education" value="2" />
+              <label for="educ_two">High school</label>
+            </div>
+            <div class="radio-list">
+              <input type="radio" id="educ_three" name="education" value="3" />
+              <label for="educ_three">University degree</label>
+            </div>
+            <div class="radio-list">
+              <input type="radio" id="educ_four" name="education" value="4" />
+              <label for="educ_four">Graduate degree</label>
+            </div>
+          </div>
+        </div>
+
+        <!-- Urban -->
+        <div class="question">
+          <label for="urban">Urban:</label><br />
+          <div class="radio">
+            <div class="radio-list">
+              <input type="radio" id="urban_one" name="urban" value="1" />
+              <label for="urban_one">Rural</label>
+            </div>
+            <div class="radio-list">
+              <input type="radio" id="urban_two" name="urban" value="2" />
+              <label for="urban_two">Suburban</label>
+            </div>
+            <div class="radio-list">
+              <input type="radio" id="urban_three" name="urban" value="3" />
+              <label for="urban_three">Urban</label>
+            </div>
+          </div>
+        </div>
+
+        <!-- Gender -->
+        <div class="question">
+          <label for="gender">Gender:</label><br />
+          <div class="radio">
+            <div class="radio-list">
+              <input type="radio" id="gender_one" name="gender" value="1" />
+              <label for="gender_one">Male</label>
+            </div>
+            <div class="radio-list">
+              <input type="radio" id="gender_two" name="gender" value="2" />
+              <label for="gender_two">Female</label>
+            </div>
+            <div class="radio-list">
+              <input type="radio" id="gender_three" name="gender" value="3" />
+              <label for="gender_three">Other</label>
+            </div>
+          </div>
+        </div>
+
+        <!-- Religion -->
+        <div class="question">
+          <label for="religion">Religion:</label><br />
+          <div class="radio">
+            <div class="radio-list">
+              <input type="radio" id="relig_one" name="religion" value="1" />
+              <label for="relig_one">Agnostic</label>
+            </div>
+            <div class="radio-list">
+              <input type="radio" id="relig_two" name="religion" value="2" />
+              <label for="relig_two">Atheist</label>
+            </div>
+            <div class="radio-list">
+              <input type="radio" id="relig_three" name="religion" value="3" />
+              <label for="relig_three">Buddhist</label>
+            </div>
+            <div class="radio-list">
+              <input type="radio" id="relig_four" name="religion" value="4" />
+              <label for="relig_four">Christian (Catholic)</label>
+            </div>
+            <div class="radio-list">
+              <input type="radio" id="relig_five" name="religion" value="5" />
+              <label for="relig_five">Christian (Mormon)</label>
+            </div>
+            <div class="radio-list">
+              <input type="radio" id="relig_six" name="religion" value="6" />
+              <label for="relig_six">Christian (Protestant)</label>
+            </div>
+            <div class="radio-list">
+              <input type="radio" id="relig_seven" name="religion" value="7" />
+              <label for="relig_seven">Christian (Other)</label>
+            </div>
+            <div class="radio-list">
+              <input type="radio" id="relig_eight" name="religion" value="8" />
+              <label for="relig_eight">Hindu</label>
+            </div>
+            <div class="radio-list">
+              <input type="radio" id="relig_nine" name="religion" value="9" />
+              <label for="relig_nine">Jewish</label>
+            </div>
+            <div class="radio-list">
+              <input type="radio" id="relig_ten" name="religion" value="10" />
+              <label for="relig_ten">Muslim</label>
+            </div>
+            <div class="radio-list">
+              <input
+                type="radio"
+                id="relig_eleven"
+                name="religion"
+                value="11"
+              />
+              <label for="relig_eleven">Sikh</label>
+            </div>
+            <div class="radio-list">
+              <input
+                type="radio"
+                id="relig_twelve"
+                name="religion"
+                value="12"
+              />
+              <label for="relig_twelve">Other</label>
+            </div>
+          </div>
+        </div>
+
+        <!-- Orientation -->
+        <div class="question">
+          <label for="orientation">Orientation:</label><br />
+          <div class="radio">
+            <div class="radio-list">
+              <input type="radio" id="orien_one" name="orientation" value="1" />
+              <label for="orien_one">Heterosexual</label>
+            </div>
+            <div class="radio-list">
+              <input type="radio" id="orien_two" name="orientation" value="2" />
+              <label for="orien_two">Bisexual</label>
+            </div>
+            <div class="radio-list">
+              <input
+                type="radio"
+                id="orien_three"
+                name="orientation"
+                value="3"
+              />
+              <label for="orien_three">Homosexual</label>
+            </div>
+            <div class="radio-list">
+              <input
+                type="radio"
+                id="orien_four"
+                name="orientation"
+                value="4"
+              />
+              <label for="orien_four">Asexual</label>
+            </div>
+            <div class="radio-list">
+              <input
+                type="radio"
+                id="orien_five"
+                name="orientation"
+                value="5"
+              />
+              <label for="orien_five">Other</label>
+            </div>
+          </div>
+        </div>
+
+        <!-- Race -->
+        <div class="question">
+          <label for="race">Race:</label><br />
+          <div class="radio">
+            <div class="radio-list">
+              <input type="radio" id="race_one" name="race" value="1" />
+              <label for="race_one">Asian</label>
+            </div>
+            <div class="radio-list">
+              <input type="radio" id="race_two" name="race" value="2" />
+              <label for="race_two">Arab</label>
+            </div>
+            <div class="radio-list">
+              <input type="radio" id="race_three" name="race" value="3" />
+              <label for="race_three">Black</label>
+            </div>
+            <div class="radio-list">
+              <input type="radio" id="race_four" name="race" value="4" />
+              <label for="race_four">Indigenous Australian</label>
+            </div>
+            <div class="radio-list">
+              <input type="radio" id="race_five" name="race" value="5" />
+              <label for="race_five">Native American</label>
+            </div>
+            <div class="radio-list">
+              <input type="radio" id="race_six" name="race" value="6" />
+              <label for="race_six">White</label>
+            </div>
+            <div class="radio-list">
+              <input type="radio" id="race_seven" name="race" value="7" />
+              <label for="race_seven">Other</label>
+            </div>
+          </div>
+        </div>
+
+        <!-- Married -->
+        <div class="question">
+          <label for="married">Married:</label><br />
+          <div class="radio">
+            <div class="radio-list">
+              <input type="radio" id="married_one" name="married" value="1" />
+              <label for="married_one">Never married</label>
+            </div>
+            <div class="radio-list">
+              <input type="radio" id="married_two" name="married" value="2" />
+              <label for="married_two">Currently married</label>
+            </div>
+            <div class="radio-list">
+              <input type="radio" id="married_three" name="married" value="3" />
+              <label for="married_three">Previously married</label>
+            </div>
+          </div>
+        </div>
+
+        <!-- Familysize -->
+        <div class="question">
+          <label for="familysize">Familysize:</label><br />
+          <input
+            type="number"
+            id="familysize"
+            name="familysize"
+            min="1"
+          /><br />
+        </div>
+
+        <!-- Age group -->
+        <div class="question">
+          <label for="age_group">Age group:</label><br />
+          <div class="radio">
+            <div class="radio-list">
+              <input
+                type="radio"
+                id="age_group_one"
+                name="age_group"
+                value="1"
+              />
+              <label for="age_group_one">Child</label>
+            </div>
+            <div class="radio-list">
+              <input
+                type="radio"
+                id="age_group_two"
+                name="age_group"
+                value="2"
+              />
+              <label for="age_group_two">Adolescence</label>
+            </div>
+            <div class="radio-list">
+              <input
+                type="radio"
+                id="age_group_three"
+                name="age_group"
+                value="3"
+              />
+              <label for="age_group_three">Adult</label>
+            </div>
+            <div class="radio-list">
+              <input
+                type="radio"
+                id="age_group_three"
+                name="age_group"
+                value="4"
+              />
+              <label for="age_group_three">Senior Adult</label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <input type="submit" name="submit" value="Submit" class="submit" />
+    </form>
+  </body>
+</html>
